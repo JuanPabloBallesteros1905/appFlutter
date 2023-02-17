@@ -13,12 +13,17 @@ class CustomInitial extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        const FadeInImage(
-          placeholder: AssetImage('assets/images/loading.gif'),
-          image: NetworkImage(
-              'https://melonapp.com/blog/content/images/size/w1000/2021/12/pexels-ron-lach-7848992-3.jpg'),
+        Container(
           width: double.infinity,
-          height: 307,
+          height: 350,
+          child: const FadeInImage(
+            fit: BoxFit.cover,
+            placeholder: AssetImage('assets/images/loading.gif'),
+            image: NetworkImage(
+                'https://melonapp.com/blog/content/images/size/w1000/2021/12/pexels-ron-lach-7848992-3.jpg'),
+            width: double.infinity,
+            height: 307,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 94, horizontal: 40),
